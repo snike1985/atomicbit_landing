@@ -1,0 +1,116 @@
+.popup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color: rgba(43,43,43,.9);
+  text-align: center;
+  overflow: hidden;
+  overflow-y: scroll;
+  width: 100%;
+
+  &_opened {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+    height: 100%;
+    -webkit-transition: opacity 500ms ease-in-out, visibility 500ms ease-in-out;
+    transition: opacity 500ms ease-in-out, visibility 500ms ease-in-out;
+  }
+
+  &_hide {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__wrap {
+    position: relative;
+    top: 0 !important;
+    z-index: 2;
+  }
+
+  &__content {
+    padding: 30px;
+    text-align: left;
+  }
+
+  &__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 28px;
+    height: 28px;
+    text-indent: -5000px;
+    z-index: 2;
+    cursor: pointer;
+
+    &:after,
+    &:before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: $popup-close-back;
+      transform-origin: center;
+      content: '';
+    }
+
+    &:after{
+      transform: translateY( 50% ) rotate( 45deg );
+    }
+
+    &:before {
+      transform: translateY( 50% ) rotate( -45deg );
+    }
+
+    &:active {
+      background-position: 0 bottom;
+    }
+
+  }
+
+  &__scrollbar-measure {
+    overflow: scroll;
+    position: absolute;
+    top: -9999px;
+    width: 100px;
+    height: 100px;
+  }
+
+}
+
+@media (min-width: $tablet-portrait) {
+  .popup {
+
+    &__content {
+      padding: 70px;
+    }
+
+    &__close{
+      top: 10px;
+      right: 10px;
+      width: 60px;
+      height: 60px;
+
+      &:after,
+      &:before{
+        height: 4px;
+        -webkit-transition: opacity .3s ease;
+        transition: opacity .3s ease;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+    }
+
+  }
+}

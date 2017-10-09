@@ -1,0 +1,22 @@
+.map {
+  display: none;
+}
+
+@media (min-width: $tablet-portrait) {
+  .map {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    overflow: hidden;
+  }
+}
+
+@media (min-width: $desktop) {
+  .map {
+
+  }
+}
+

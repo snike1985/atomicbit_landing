@@ -1,0 +1,83 @@
+.designs-aspects {
+  padding-bottom: 53px;
+
+  &__wrap{
+
+  }
+
+  &__content{
+    max-width: 276px;
+    margin: 0 auto 27px;
+    padding-right: 31px;
+
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 24px;
+    color: #6C798B;
+  }
+
+  &__icons{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    margin-bottom: 53px;
+
+    li {
+      margin: 0 22px;
+    }
+
+    img{
+      display: block;
+    }
+
+  }
+
+  &__btn-wrap{
+    display: flex;
+    justify-content: center;
+  }
+
+}
+
+@media (min-width: $tablet-portrait) {
+  .designs-aspects {
+
+  }
+}
+
+@media (min-width: $desktop) {
+  .designs-aspects {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0 calc( 50% - 485px );
+
+    background: url(../pic/home/3d-globe@2x.png) no-repeat calc( 50% - 315px) 0;
+    background-size: 549px 507px;
+
+    &__wrap{
+      width: 303px;
+      padding: 70px 0 106px;
+    }
+
+    &__content{
+      margin: 0 0 49px;
+      padding-right: 0;
+      font-size: 14px;
+      line-height: 28px;
+    }
+
+    &__icons{
+      justify-content: flex-start;
+      margin-bottom: 50px;
+
+      li{
+        margin: 0 42px 0 0;
+      }
+
+    }
+
+  }
+}
+

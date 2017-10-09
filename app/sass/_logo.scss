@@ -1,0 +1,26 @@
+.logo {
+  display: none;
+}
+
+@media (min-width: $tablet-portrait) {
+  .logo {
+
+  }
+}
+
+@media (min-width: $desktop) {
+  .logo {
+    position: absolute;
+    top: calc( 50% - 20px );
+    left: 46px;
+    display: block;
+    width: 167px;
+    height: 40px;
+
+    svg{
+      display: block;
+    }
+
+  }
+}
+

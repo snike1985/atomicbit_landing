@@ -1,0 +1,369 @@
+/*---------- services ----------*/
+.services {
+  position: relative;
+
+  &__title {
+    display: block;
+    position: absolute;
+    top: 25vh;
+    left: 10vw;
+    z-index: 1;
+    font-size: 10vmin;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #514CE3;
+    transition: transform .01s linear;
+  }
+
+  &__subtitle {
+    position: absolute;
+    top: 40vh;
+    left: 30vw;
+    width: 65vw;
+    padding: 15px;
+    z-index: 1;
+    color: #6C798B;
+    font-size: 5vmin;
+    font-weight: 200;
+    line-height: 6vmin;
+    transition: transform .01s linear;
+    background-color: #FFFFFF;
+    box-shadow: 0 10px 44px 0 rgba(0,0,0,0.2), 0 10px 44px 0 rgba(0,0,0,0.1);
+
+    span { display: block }
+  }
+
+  &__description {
+    position: absolute;
+    top: 70vh;
+    left: 5vh;
+    width: 70vw;
+    padding: 15px;
+    z-index: 1;
+    color: #6C798B;
+    font-size: 4vmin;
+    font-weight: 300;
+    line-height: 5vmin;
+    transition: transform .01s linear;
+    background-color: #FFFFFF;
+    box-shadow: 0 10px 44px 0 rgba(0,0,0,0.2), 0 10px 44px 0 rgba(0,0,0,0.1);
+  }
+
+  &__head {
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+    margin-bottom: 20px;
+
+    img {
+      display: block;
+      @include absoluteCenter();
+      min-width: 100%;
+      min-height: 100%;
+    }
+  }
+
+  &__layout {
+    max-width: 1064px;
+    margin: 0 auto 58px;
+    padding: 0 20px;
+    text-align: center;
+
+    p {
+      max-width: 440px;
+      margin: 0 auto;
+    }
+
+    .services__image {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__benefits {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 30px 0 10px;
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 105px;
+      width: 130px;
+      margin-bottom: 20px;
+      color: #6C798B;
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 15px;
+      text-align: center;
+      text-transform: uppercase;
+
+      svg,
+      img {
+        display: block;
+        margin: 0 auto 18px;
+      }
+    }
+  }
+
+  &__image {
+    overflow: hidden;
+    position: relative;
+    height: 200px;
+    margin-bottom: 36px;
+
+    img {
+      display: block;
+      @include absoluteCenter();
+      min-width: 100%;
+      min-height: 100%;
+    }
+  }
+
+  p {
+    color: #6C798B;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 24px;
+  }
+
+  &__list {
+
+  }
+
+  &__item {
+    position: relative;
+    margin-bottom: 50px;
+
+    &-pic {
+
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    &-content {
+      padding: 0 25px;
+
+      .btn{
+        width: 100%;
+        margin-top: 32px;
+
+        & > span{
+          padding: 18px 35px;
+          font-size: 14px;
+        }
+
+      }
+
+    }
+
+    &-title {
+      position: relative;
+      top: -30px;
+      left: 15px;
+      max-width: calc(100% - 15px);
+      padding: 15px;
+      background-color: #FFFFFF;
+      box-shadow: 0 5px 22px 0 rgba(0,0,0,0.1);
+      color: #6C798B;
+      font-size: 20px;
+      font-weight: 100;
+      line-height: 28px;
+      text-align: center;
+    }
+  }
+}
+@media (min-width: $tablet-portrait) {
+  .services {
+
+    &__item {
+
+      &-content {
+
+        .btn{
+          width: auto;
+
+          & > span{
+            padding: 9px 20px;
+            font-size: 13px;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+}
+
+@media (min-width: $desktop) {
+  .services {
+
+    &__title {
+      top: 281px;
+      left: 245px;
+      font-size: 70px;
+      letter-spacing: 41px;
+    }
+
+    &__subtitle {
+      top: 519px;
+      left: 646px;
+      width: 536px;
+      padding: 50px 60px;
+      font-size: 24px;
+      line-height: 40px;
+    }
+
+    &__description {
+      top: 702px;
+      left: calc(646px - 335px);
+      width: 335px;
+      padding: 50px 60px;
+      font-size: 14px;
+      line-height: 28px;
+    }
+
+    &__head { margin-bottom: 19px }
+
+    &__layout {
+      margin-bottom: 116px;
+
+      .services__image {
+        margin-bottom: 73px;
+      }
+    }
+
+    &__benefits {
+      display: block;
+      position: relative;
+      width: 1024px;
+      height: 370px;
+      margin: 0 auto;
+
+      background: url('../pic/services/dotted-path-1.svg'), url('../pic/services/dotted-path-2.svg');
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: 50% 22px;
+
+      &-item {
+        display: block;
+        position: absolute;
+        width: 94px;
+        height: auto;
+        background-color: #fff;
+
+        &.brand-strategy {
+          top: 256px;
+          left: -14px;
+        }
+        &.digital-marketing {
+          top: 238px;
+          left: 175px;
+        }
+        &.lead-generation {
+          top: 182px;
+          left: 375px;
+        }
+        &.seo {
+          top: 81px;
+          left: 559px;
+        }
+        &.traditional-advertising {
+          top: 23px;
+          left: 755px;
+        }
+        &.paid-search-advertisingy {
+          top: 0;
+          left: 941px;
+        }
+        &.graphic-design {
+          top: 15px;
+          left: 89px;
+        }
+        &.web-development {
+          top: 47px;
+          left: 260px;
+        }
+        &.social-media {
+          top: 209px;
+          left: 659px;
+        }
+        &.video-production {
+          top: 255px;
+          left: 847px;
+        }
+      }
+    }
+
+    &__image {
+      height: 400px;
+      margin-bottom: 332px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 28px;
+    }
+
+    &__list {
+
+    }
+
+    &__item {
+      display: flex;
+      position: relative;
+      margin-bottom: 211px;
+
+      &:nth-child(even) {
+
+        .services__item-pic {
+          order: 2;
+        }
+
+        .services__item-content {
+          order: 1;
+          padding: 108px 50px 0 80px;
+
+          .btn {
+            display: block;
+            width: 267px;
+            margin: 40px 0 0 auto;
+          }
+
+        }
+      }
+
+      &-pic {
+        width: 50%;
+      }
+
+      &-content {
+        width: 50%;
+        padding: 108px 80px 0 50px;
+
+        .btn {
+          min-width: 267px;
+          margin-top: 40px;
+        }
+      }
+
+      &-title {
+        position: absolute;
+        top: -108px;
+        left: 376px;
+        padding: 50px 100px;
+        box-shadow: 0 10px 44px 0 rgba(0,0,0,0.1);
+        font-size: 36px;
+        line-height: 54px;
+      }
+    }
+  }
+}
+/*---------- /services ---------*/
+

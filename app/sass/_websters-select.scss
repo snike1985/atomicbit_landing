@@ -1,0 +1,149 @@
+.websters-select {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  height: 44px;
+  margin-bottom: 16px;
+  padding: 0 20px;
+  border: 1px solid rgba(108,121,139,1);
+  border-radius: 0;
+  color: rgba(108,121,139,1);
+  @include prompt;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 28px;
+  background-color: transparent;
+
+  &_opened {
+
+    .websters-select__arrow {
+      -webkit-transform: rotate(225deg) translate(4px, -1px);
+      transform: rotate(225deg) translate(4px, -1px);
+    }
+
+  }
+
+  &__arrow{
+    position: absolute;
+    top: 50%;
+    right: 17px;
+    bottom: 0;
+    width: 10px;
+    height: 10px;
+    border-bottom: 1px solid rgba(108,121,139,1);
+    border-right: 1px solid rgba(108,121,139,1);
+    transform-origin: center;
+    -webkit-transform: rotate(45deg) translate(-5px, -5px);
+    transform: rotate(45deg) translate(-5px, -5px);
+    -webkit-transition: -webkit-transform 200ms ease-in-out;
+    transition: transform 200ms ease-in-out;
+  }
+
+  &__item {
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    left: 0;
+    padding: 0 20px;
+    color: rgba(108,121,139,1);
+    @include prompt;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 28px;
+    box-sizing: border-box;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: left;
+    transform: translateY(-50%);
+  }
+
+  &_mobile {
+
+    select {
+      position: absolute;
+      top: 0;
+      bottom: -1px;
+      left: 1px;
+      width: 100%;
+    }
+
+  }
+
+  &_custom {
+
+    select {
+      position: absolute;
+      left: -100000px;
+    }
+
+  }
+
+  &__popup {
+    overflow: hidden;
+    position: absolute;
+    z-index: 11;
+    box-sizing: border-box;
+    border: 1px solid rgba(108,121,139,1);
+    background:rgba(255,255,255,0.9);
+
+    ul {
+      z-index: 1;
+    }
+
+    li {
+      white-space: nowrap;
+      overflow: hidden;
+      cursor: pointer;
+      @include prompt;
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 28px;
+      color: rgba(108,121,139,1);
+      @include prompt;
+      -webkit-transition: background-color .3s ease, color .3s ease;
+      transition: background-color .3s ease, color .3s ease;
+
+      &:hover {
+        color: #fff;
+        background-color: #000;
+      }
+
+      &.active {
+        color: #fff !important;
+        background-color: #000!important;
+        cursor: default;
+      }
+
+      &:first-child{
+        display: none;
+      }
+
+    }
+
+  }
+
+  &.not-valid,
+  &.not-touched{
+    border-color: #f00!important;;
+  }
+
+}
+
+@media (min-width: $tablet-portrait) {
+  .websters-select {
+    height: 50px;
+    margin-bottom: 20px;
+
+    &__arrow{
+      -webkit-transform: rotate(45deg) translate(-9px, -2px);
+      transform: rotate(45deg) translate(-9px, -2px);
+      cursor: pointer;
+    }
+
+  }
+}

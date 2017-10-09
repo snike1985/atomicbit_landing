@@ -1,0 +1,22 @@
+.copyright {
+  display: none;
+}
+
+@media (min-width: $tablet-portrait) {
+  .copyright {
+
+  }
+}
+
+@media (min-width: $desktop) {
+  .copyright {
+    display: block;
+    position: relative;
+    top: 5px;
+    left: -21px;
+    color: #6C798B;
+    font-size: 11px;
+    line-height: 17px;
+  }
+}
+

@@ -1,0 +1,63 @@
+.get-in-touch {
+  margin-bottom: 8px;
+  font-weight: 100;
+  overflow: hidden;
+
+  a{
+    color: #6C798B;
+  }
+
+  svg{
+    width: 24px;
+    height: 24px;
+    margin-right: 11px;
+  }
+
+  & > div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 37px;
+    font-size: 20px;
+
+    &:nth-child(2){
+      font-size: 20.5px;
+
+      svg{
+        width: 20px;
+        height: 20px;
+        margin: 0 16px 0 1px;
+      }
+
+    }
+
+  }
+
+}
+
+@media (min-width: $tablet-portrait) {
+  .get-in-touch {
+
+  }
+}
+
+@media (min-width: $desktop) {
+  .get-in-touch {
+    display: flex;
+    margin-left: 10px;
+    margin-bottom: 0;
+
+    & > div {
+      margin-right: 44px;
+      margin-bottom: 0;
+      font-size: 14px;
+
+      &:nth-child(2){
+        font-size: 14px;
+      }
+
+    }
+
+  }
+}
+

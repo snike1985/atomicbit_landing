@@ -1,0 +1,40 @@
+.social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 229px;
+  margin: 0 auto;
+  margin-left: -5px;
+
+  svg{
+    width: 20px;
+    height: 20px;
+  }
+
+}
+
+@media (min-width: $tablet-portrait) {
+  .social {
+
+  }
+}
+
+@media (min-width: $desktop) {
+  .social {
+    margin: 0;
+    margin-left: -56px;
+
+    a{
+      margin: 0 25px;
+      -webkit-transition: opacity .3s ease;
+      transition: opacity .3s ease;
+
+      &:hover{
+        opacity: .5;
+      }
+
+    }
+
+  }
+}
+

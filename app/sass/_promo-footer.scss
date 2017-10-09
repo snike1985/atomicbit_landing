@@ -1,0 +1,88 @@
+.promo-footer {
+  padding: 0 6px;
+  text-align: center;
+
+  &__content{
+    margin-bottom: 23px;
+    padding: 0 37px;
+    font-size: 19px;
+    font-weight: 100;
+    line-height: 29px;
+    text-align: center;
+  }
+
+  &__art{
+    height: 110px;
+    margin-bottom: 33px;
+    color: rgba(81,76,227,.13);
+    font-size: 68px;
+    font-weight: 900;
+    background: url(../pic/home/top-sphere@3x.png) no-repeat top center;
+    background-size: contain;
+    letter-spacing: 16px;
+  }
+
+  &__science{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    height: 110px;
+    margin-top: 42px;
+    padding: 0 0 11px 10px;
+    color: rgba(76,200,246,0.32);
+    font-size: 44px;
+    font-weight: 900;
+    letter-spacing: 15px;
+    background: url(../pic/home/bottom-sphere@3x.png) no-repeat bottom center;
+    background-size: contain;
+  }
+
+}
+
+@media (min-width: $tablet-portrait) {
+  .promo-footer {
+
+  }
+}
+
+@media (min-width: $desktop) {
+  .promo-footer {
+    padding-top: 76px;
+
+    &__art{
+      height: 237px;
+      margin-bottom: 41px;
+      padding-right: 525px;
+      font-size: 188px;
+      letter-spacing: 45px;
+      line-height: 144px;
+    }
+
+    &__content{
+      max-width: 850px;
+      margin: 0 auto 33px;
+      font-size: 36px;
+      line-height: 54px;
+
+      & + .promo-footer__content{
+        max-width: 100%;
+        margin: 0 auto 55px;
+      }
+
+      br{
+        display: none;
+      }
+
+    }
+
+    &__science{
+      height: 237px;
+      padding-left: 350px;
+      font-size: 144px;
+      letter-spacing: 45px;
+      line-height: 184px;
+    }
+
+  }
+}
+

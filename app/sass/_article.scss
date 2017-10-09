@@ -1,0 +1,303 @@
+.article {
+  position: relative;
+  max-width: 1341px;
+  margin: 170px auto 0;
+  color: #6C798B;
+  font-size: 14px;
+  line-height: 28px;
+  font-weight: 300;
+
+  &__time{
+    display: block;
+    margin-bottom: 22px;
+  }
+
+  &__main-theme{
+    max-height: 380px;
+    max-width: 1341px;
+    margin: 0 auto 32px;
+    background-color: #F0F0F0;
+    overflow: hidden;
+
+    img{
+      display: block;
+      width: 100%;
+    }
+
+    h1{
+
+    }
+
+  }
+
+  &__wrap{
+    max-width: 844px;
+    margin: 0 auto 38px;
+    padding: 0 22px;
+  }
+
+  &__back{
+    position: absolute;
+    top: -50px;
+    left: 20px;
+    height: 60px;
+    padding: 0 33px 0 29px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 19px;
+    line-height: 29px;
+    font-weight: 200;
+    color: #6C798B;
+    background-color: #fff;
+    box-shadow: 0 10px 44px 0 rgba(0,0,0,0.1);
+
+    svg{
+      height: 14px;
+      width: 39.13px;
+      margin-right: 39px;
+      opacity: .5;
+      fill: #6C798B;
+    }
+
+  }
+
+  &__content{
+    margin-bottom: 59px;
+
+    h1{
+      margin-bottom: 29px;
+      font-weight: 100;
+      font-size: 19px;
+      line-height: 29px;
+    }
+
+    p{
+      margin-bottom: 28px;
+    }
+
+  }
+
+  &__quote{
+    margin-bottom: 28px;
+    padding: 28px;
+    font-size: 19px;
+    line-height: 29px;
+    font-weight: 200;
+    background-color: #fff;
+    box-shadow: 0 10px 44px 0 rgba(0,0,0,0.1);
+  }
+
+  &__img{
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 28px;
+    background-color: #FAFAFA;
+    box-shadow: 0 10px 44px 0 rgba(0,0,0,0.1);
+
+    img{
+      display: block;
+      width: 100%;
+    }
+
+    &-right{
+      float: right;
+    }
+
+    &-left{
+      float: left;
+    }
+
+  }
+
+  &__pagination{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 0 -15px 18px;
+
+    &-item{
+      width: 100%;
+      margin-bottom: 40px;
+      color: #6C798B;
+      font-size: 20px;
+      line-height: 30px;
+      font-weight: 100;
+
+      div{
+
+        &:first-child {
+          font-size: 18px;
+          line-height: 28px;
+          font-weight: 900;
+          letter-spacing: 5px;
+          -webkit-transition: opacity .3s ease;
+          transition: opacity .3s ease;
+        }
+
+        &:nth-child(2){
+          display: none;
+        }
+
+      }
+
+      &:nth-child(2){
+        text-align: right;
+      }
+
+      &.disable{
+        pointer-events: none;
+      }
+
+    }
+
+  }
+
+  &__footer{
+    margin-bottom: 33px;
+    padding: 0 22px;
+    color: #6C798B;
+    font-size: 19px;
+    font-weight: 100;
+    line-height: 29px;
+    text-align: center;
+  }
+
+}
+
+@media (min-width: $tablet-portrait) {
+  .article {
+
+    &__back{
+      top: -30px;
+      left: 68px;
+      font-size: 24px;
+      line-height: 40px;
+    }
+
+    &__quote{
+      float: left;
+      width: 505px;
+      margin: 21px 57px 10px -12px;
+      padding: 58px 58px 68px;
+      font-size: 24px;
+      line-height: 40px;
+    }
+
+    &__content {
+
+      h1{
+        font-size: 36px;
+        line-height: 54px;
+      }
+
+      margin-bottom: 109px;
+    }
+
+    &__img{
+      margin-bottom: 58px;
+
+      &-right{
+        width: 445px;
+        margin: 16px -12px 0 57px;
+      }
+
+      &-left{
+        width: 445px;
+        margin: 16px 57px 0 -12px;
+      }
+
+    }
+
+    &__pagination{
+      margin: 0 -5px 103px 0;
+      background: url(../img/logo_sign@2x.png) no-repeat center;
+      background-size: 50px;
+
+      &-item {
+        width: 240px;
+        margin-bottom: 0;
+
+        & > div{
+
+          &:first-child{
+            font-size: 24px;
+            line-height: 40px;
+          }
+
+          &:nth-child(2){
+            display: block;
+          }
+
+        }
+
+      }
+
+    }
+
+    &__footer{
+      font-size: 36px;
+      line-height: 54px;
+    }
+
+  }
+}
+
+@media (min-width: $desktop) {
+  .article {
+
+    &__back{
+      -webkit-transition: background-color .3s ease, color .3s ease;
+      transition: background-color .3s ease, color .3s ease;
+
+      svg g{
+        -webkit-transition: fill .3s ease;
+        transition: fill .3s ease;
+      }
+
+      &:hover{
+        background-color: #514CE3;
+        color: #fff;
+
+        svg g{
+          fill: #fff;
+        }
+
+      }
+
+    }
+
+    &__quote{
+      margin-left: -163px;
+    }
+
+    &__img{
+
+      &-right{
+        margin-right: -163px;
+      }
+
+      &-left{
+        margin-left: -163px;
+      }
+
+    }
+
+    &__pagination{
+
+      &-item{
+
+        &:hover{
+
+          div:first-child{
+            opacity: .5;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+}
