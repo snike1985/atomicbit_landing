@@ -240,7 +240,7 @@
             },
             _openMenu = function(){
                 _obj.addClass( 'visible' );
-                _body.css( 'overflow-y', 'hidden' );
+                // _body.css( 'overflow-y', 'hidden' );
                 _site.css( {
                     'position': 'relative'
                 } );
@@ -248,7 +248,7 @@
             _closeMenu = function(){
                 _obj.removeClass( 'visible' );
                 _site.removeAttr( 'style' );
-                _body.removeAttr( 'style' );
+                // _body.removeAttr( 'style' );
             };
 
         //public properties

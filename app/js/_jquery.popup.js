@@ -20,8 +20,10 @@
             _btnClose = _obj.find( '.popup__close, .popup__cancel' ),
             _wrap = _obj.find( '.popup__wrap' ),
             _contents = _obj.find( '.popup__content' ),
-            _scrollConteiner = $( 'html' ),
+            _scrollConteiner = $( 'body' ),
             _window = $( window ),
+            _site = $( '.site' ),
+            _topScroll = 0,
             _timer = setTimeout( function(){}, 1 );
 
         //private methods
@@ -50,10 +52,11 @@
                 _obj.css( {
                     overflowY: 'hidden'
                 } );
-                _scrollConteiner.css( {
-                    overflowY: 'auto',
-                    paddingRight: 0
-                } );
+
+                _scrollConteiner.removeAttr( 'style' );
+                _site.removeAttr( 'style' );
+                _scrollConteiner.scrollTop( _topScroll );
+
 
                 _obj.removeClass( 'popup_opened' );
                 _obj.addClass( 'popup_hide' );
@@ -76,22 +79,22 @@
                 _window.on( {
                     resize: function(){
                         _centerWrap();
+                    },
+                    'keydown': function ( e ) {
+                        switch( e.which ) {
+
+                            case 27:
+                                _hide();
+                                break;
+
+                            default:
+                                return;
+                        }
                     }
                 } );
                 _btnShow.on( {
                     click: function(){
                         _show( $( this ).attr( 'data-popup' ) );
-                        return false;
-                    }
-                } );
-                _wrap.on( {
-                    click: function( e ){
-                        e.stopPropagation();
-                    }
-                } );
-                _obj.on( {
-                    click: function(){
-                        _hide();
                         return false;
                     }
                 } );
@@ -105,10 +108,18 @@
             _show = function( className ){
                 _setPopupContent( className );
 
+                _topScroll =  _scrollConteiner.scrollTop();
+
                 _scrollConteiner.css( {
                     overflowY: 'hidden',
                     paddingRight: _getScrollWidth()
                 } );
+
+                _site.css( {
+                    'position': 'relative',
+                    'top': _topScroll * -1
+                } );
+
                 _obj.addClass( 'popup_opened' );
                 _centerWrap();
 
@@ -124,8 +135,8 @@
 
         //public methods
 
-
         _init();
     };
+
 } )();
 

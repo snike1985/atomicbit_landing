@@ -133,6 +133,16 @@
 
 @media (min-width: $desktop) {
   .hero {
+    justify-content: flex-end;
+
+    &__content {
+      padding: 100px 4% 75px;
+      width: 600px;
+    }
+  }
+}
+@media (min-width: $high-desktop) {
+  .hero {
     min-height: 800px;
     font-size: 36px;
     line-height: 42px;
